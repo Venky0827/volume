@@ -1,0 +1,5 @@
+- name: "Deleting volume"
+  openstack.cloud.volume:
+    state: absent
+    name: "{{ item.name }}"
+  loop: "{{ delete_volume }}"

@@ -1,0 +1,9 @@
+---
+# tasks file for storage
+- name: Creating volume 
+  import_tasks: create_volume.yml 
+  when: options.create_volume
+
+- name: Deleting instance 
+  import_tasks: delete_volume.yml
+  when: options.delete_volume

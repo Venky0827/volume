@@ -1,0 +1,6 @@
+- name: "Creating volume"
+  openstack.cloud.volume:
+    state: present
+    size: "{{ item.size }}"
+    name: "{{ item.name }}"
+  loop: "{{ create_volume }}"
